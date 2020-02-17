@@ -15,24 +15,19 @@ function insertAfter(newNode, referenceNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
 
-document.querySelectorAll('.date_field').forEach((e, i) => {
-    var julian = Object.assign(document.createElement('input'), {
+function createConvertButton(text, convert) {
+    let julian = Object.assign(document.createElement('input'), {
         type: 'button',
-        value: 'To Julian'
+        value: text
     });
     julian.setAttribute('class', 'grey super small button')
     julian.addEventListener('click', () => {
-        convertDate(e, 'fromGregorianToJulian');
+        convertDate(e, convert);
     });
     insertAfter(julian, e.querySelector('div.vertically-aligned'))
+}
 
-    var gregorian = Object.assign(document.createElement('input'), {
-        'type': 'button',
-        'value': 'To Gregorian'
-    });
-    gregorian.setAttribute('class', 'grey super small button')
-    gregorian.addEventListener('click', () => {
-        convertDate(e, 'fromJulianToGregorian');
-    });
-    insertAfter(gregorian, e.querySelector('div.vertically-aligned'))
+document.querySelectorAll('.date_field').forEach((e, i) => {
+    createConvertButton('To Julian', 'fromGregorianToJulian');
+    createConvertButton('To Gregorian', 'fromJulianToGregorian');
 });
