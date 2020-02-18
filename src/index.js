@@ -15,7 +15,7 @@ function insertAfter(newNode, referenceNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
 
-function createConvertButton(text, convert) {
+function createConvertButton(e, text, convert) {
     let julian = Object.assign(document.createElement('input'), {
         type: 'button',
         value: text
@@ -27,7 +27,11 @@ function createConvertButton(text, convert) {
     insertAfter(julian, e.querySelector('div.vertically-aligned'))
 }
 
-document.querySelectorAll('.date_field').forEach((e, i) => {
-    createConvertButton('To Julian', 'fromGregorianToJulian');
-    createConvertButton('To Gregorian', 'fromJulianToGregorian');
-});
+try {
+    document.querySelectorAll('.date_field').forEach((e) => {
+        createConvertButton(e, 'To Julian', 'fromGregorianToJulian');
+        createConvertButton(e, 'To Gregorian', 'fromJulianToGregorian');
+    });   
+} catch(ex) {
+    console.error(ex);
+}

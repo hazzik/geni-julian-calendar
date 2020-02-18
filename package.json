@@ -1,11 +1,11 @@
 {
   "name": "geni-julian-calendar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "pack": "web-ext run --source-dir ./dist/",
+    "pack": "web-ext build --source-dir ./dist/",
     "start:firefox": "web-ext run --source-dir ./dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
