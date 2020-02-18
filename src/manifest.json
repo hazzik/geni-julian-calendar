@@ -5,7 +5,8 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.geni.com/profile/edit_basics/*"
+        "https://www.geni.com/profile/edit_basics/*",
+        "https://www.geni.com/profile/edit_relationships/*"
       ],
       "js": [
         "main.js"
