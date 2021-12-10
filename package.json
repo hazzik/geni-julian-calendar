@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "copy-webpack-plugin": "^5.1.1",
     "web-ext": "^4.1.0",
