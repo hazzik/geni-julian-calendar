@@ -32,11 +32,25 @@ function createConvertButton(e, text, convert) {
     insertAfter(julian, e.querySelector('div.vertically-aligned'))
 }
 
-try {
-    document.querySelectorAll('.date_field').forEach((e) => {
+function createButtons(element) {
+    element.querySelectorAll('.date_field').forEach((e) => {
         createConvertButton(e, 'To Julian', 'fromGregorianToJulian');
         createConvertButton(e, 'To Gregorian', 'fromJulianToGregorian');
-    });   
+    });
+}
+
+try {
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            mutation.addedNodes.forEach((node) => {
+                if (node.id == 'edit_profile' || node.id == 'lightbox_container') {
+                    createButtons(node);
+                }
+            });
+        });
+    });
+    observer.observe(document.querySelector("body"), { subtree: true, childList: true });
+    createButtons(document);
 } catch(ex) {
     console.error(ex);
 }

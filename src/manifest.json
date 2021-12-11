@@ -8,7 +8,8 @@
         "https://www.geni.com/people/*",
         "https://www.geni.com/profile/edit_basics/*",
         "https://www.geni.com/profile/edit_relationships/*",
-        "https://www.geni.com/family-tree/create_branch"
+        "https://www.geni.com/family-tree/create_branch",
+        "https://www.geni.com/family-tree/index/*"
       ],
       "js": [
         "main.js"
