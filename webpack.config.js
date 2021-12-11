@@ -1,10 +1,13 @@
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-	devtool: 'sourcemap',
+	devtool: 'source-map',
+	mode: 'production',	
 	plugins: [
-		new CopyPlugin([
-            { from: 'src/manifest.json' }
-        ])
+		new CopyPlugin({
+			patterns: [
+            	{ from: 'src/manifest.json' }
+    	    ]
+		})
 	]
 };
