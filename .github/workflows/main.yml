@@ -1,0 +1,32 @@
+name: Build
+
+on:
+  push:
+    branches: [ master, main ]
+    paths:
+      - 'package.json'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run:  npm ci
+
+      - name: Build
+        run:  npm run build
+
+      - name: Pack
+        run:  npm run pack
+
+      - name: Publish to Firefox Addons store
+        run:  npm run sign
+        env:
+          AMO_API_KEY: ${{ secrets.AMO_JWT_ISSUER }}
+          AMO_API_SECRET: ${{ secrets.AMO_JWT_SECRET }}
+          AMO_EXTENSION_ID: ${{ secrets.AMO_EXTENSION_ID }}
