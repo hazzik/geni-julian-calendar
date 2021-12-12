@@ -1,12 +1,12 @@
 {
   "name": "geni-julian-calendar",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
     "pack": "web-ext build --source-dir ./dist/",
-    "sign": "web-ext sign --source-dir ./dist/ --api-key=$AMO_API_KEY --api-secret=$AMO_API_SECRET --id=$AMO_EXTENSION_ID",
+    "publish:amo": "web-ext-submit --source-dir ./dist/ --api-key=$AMO_API_KEY --api-secret=$AMO_API_SECRET --id=$AMO_EXTENSION_ID",
     "start:firefox": "web-ext run --source-dir ./dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +16,7 @@
   "devDependencies": {
     "copy-webpack-plugin": "^10.1.0",
     "web-ext": "^6.6.0",
+    "web-ext-submit": "^6.6.0",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1"
   },

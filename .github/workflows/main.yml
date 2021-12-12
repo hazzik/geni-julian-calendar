@@ -25,7 +25,7 @@ jobs:
         run:  npm run pack
 
       - name: Publish to Firefox Addons store
-        run:  npm run sign
+        run:  npm run publish:amo
         env:
           AMO_API_KEY: ${{ secrets.AMO_JWT_ISSUER }}
           AMO_API_SECRET: ${{ secrets.AMO_JWT_SECRET }}
