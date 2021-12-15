@@ -30,3 +30,10 @@ jobs:
           AMO_API_KEY: ${{ secrets.AMO_JWT_ISSUER }}
           AMO_API_SECRET: ${{ secrets.AMO_JWT_SECRET }}
           AMO_EXTENSION_ID: ${{ secrets.AMO_EXTENSION_ID }}
+
+      - name: Publish to Chrome Web Store
+        run:  npm run publish:cws
+        env:
+          CWS_CLIENT_ID: ${{ secrets.CWS_CLIENT_ID }}
+          CWS_REFRESH_TOKEN: ${{ secrets.CWS_REFRESH_TOKEN }}
+          CWS_EXTENSION_ID: ${{ secrets.CWS_EXTENSION_ID }}
