@@ -1,4 +1,4 @@
-import CalendarConverter from 'julian-gregorian'
+import CalendarConverter from '@the_hazzik/julian-gregorian-converter'
 
 function formatDate(date, format) {
     return format.replace('YYYY', date.year).replace('MM', date.month).replace('DD', date.day);
