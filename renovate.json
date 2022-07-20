@@ -3,6 +3,10 @@
   "extends": [
     "config:base"
   ],
+  "patch": {
+    "automerge": true,
+    "automergeType": "branch"
+  },
   "packageRules": [
     {
       "matchSourceUrlPrefixes": [
