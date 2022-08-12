@@ -4,6 +4,10 @@
     "config:base",
     ":preserveSemverRanges"
   ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  },
   "patch": {
     "automerge": true,
     "automergeType": "branch"
