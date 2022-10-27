@@ -6,7 +6,9 @@
   ],
   "lockFileMaintenance": {
     "enabled": true,
-    "automerge": true
+    "automerge": true,
+    "automergeType": "pr",
+    "platformAutomerge": true
   },
   "patch": {
     "automerge": true,
