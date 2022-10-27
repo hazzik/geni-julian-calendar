@@ -10,10 +10,6 @@
     "automergeType": "pr",
     "platformAutomerge": true
   },
-  "patch": {
-    "automerge": true,
-    "automergeType": "branch"
-  },
   "packageRules": [
     {
       "matchSourceUrlPrefixes": [
