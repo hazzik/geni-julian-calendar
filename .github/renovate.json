@@ -4,6 +4,7 @@
     "config:base",
     ":preserveSemverRanges"
   ],
+  "bumpVersion": "patch",
   "lockFileMaintenance": {
     "enabled": true,
     "automerge": true,
