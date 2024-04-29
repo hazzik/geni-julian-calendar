@@ -12,13 +12,7 @@
     "platformAutomerge": true,
     "bumpVersion": "patch"
   },
-  "packageRules": [
-    {
-      "matchSourceUrlPrefixes": [
-        "https://github.com/mozilla/web-ext",
-        "https://github.com/fregante/web-ext-submit"
-      ],
-      "groupName": "Web-ext"
-    }
+  "postUpdateOptions": [
+    "npmDedupe"
   ]
 }
