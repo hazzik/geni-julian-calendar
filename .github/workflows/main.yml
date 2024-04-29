@@ -20,6 +20,8 @@ jobs:
 
       - name: Build
         run:  npm run build
+        env:
+          AMO_EXTENSION_ID: ${{ secrets.AMO_EXTENSION_ID }}
 
       - name: Pack
         run:  npm run pack
