@@ -15,7 +15,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "chrome-webstore-upload-cli": "^2.0.1",
+    "chrome-webstore-upload-cli": "^3.0.0",
     "copy-webpack-plugin": "^11.0.0",
     "web-ext": "^7.3.0",
     "webpack": "^5.65.0",
