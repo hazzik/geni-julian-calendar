@@ -1,12 +1,12 @@
 {
   "name": "geni-julian-calendar",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --env AMO_EXTENSION_ID=$AMO_EXTENSION_ID",
     "pack": "web-ext build --source-dir ./dist/",
-    "publish:amo": "web-ext sign --use-submission-api --channel listed --source-dir ./dist/ --api-key=$AMO_API_KEY --api-secret=$AMO_API_SECRET",
+    "publish:amo": "web-ext sign --channel listed --source-dir ./dist/ --api-key=$AMO_API_KEY --api-secret=$AMO_API_SECRET",
     "publish:cws": "chrome-webstore-upload upload --auto-publish --source ./dist/ --extension-id $CWS_EXTENSION_ID --client-id $CWS_CLIENT_ID --client-secret $CWS_CLIENT_SECRET --refresh-token $CWS_REFRESH_TOKEN",
     "start:firefox": "web-ext run --source-dir ./dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
