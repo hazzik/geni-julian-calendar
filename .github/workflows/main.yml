@@ -23,6 +23,9 @@ jobs:
         env:
           AMO_EXTENSION_ID: ${{ secrets.AMO_EXTENSION_ID }}
 
+      - name: Lint
+        run:  npm run lint
+
       - name: Pack
         run:  npm run pack
 
