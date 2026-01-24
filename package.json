@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --env AMO_EXTENSION_ID=$AMO_EXTENSION_ID",
+    "build": "vite build",
     "pack": "web-ext build --source-dir ./dist/",
     "publish:amo": "web-ext sign --channel listed --source-dir ./dist/ --api-key=$AMO_API_KEY --api-secret=$AMO_API_SECRET",
     "publish:cws": "chrome-webstore-upload upload --auto-publish --source ./dist/ --extension-id $CWS_EXTENSION_ID --client-id $CWS_CLIENT_ID --client-secret $CWS_CLIENT_SECRET --refresh-token $CWS_REFRESH_TOKEN",
@@ -16,10 +16,8 @@
   "license": "MIT",
   "devDependencies": {
     "chrome-webstore-upload-cli": "^3.0.0",
-    "copy-webpack-plugin": "^12.0.0",
-    "web-ext": "^8.0.0",
-    "webpack": "^5.65.0",
-    "webpack-cli": "^5.0.0"
+    "vite": "^7.3.1",
+    "web-ext": "^8.0.0"
   },
   "dependencies": {
     "@the_hazzik/julian-gregorian-converter": "^1.0.1"
