@@ -1,6 +1,6 @@
 {
   "name": "geni-julian-calendar",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "",
   "main": "index.js",
   "scripts": {
