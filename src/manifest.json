@@ -15,5 +15,12 @@
         "main.js"
       ]
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "data_collection_permissions": {
+        "required": []
+      }
+    }
+  }
 }

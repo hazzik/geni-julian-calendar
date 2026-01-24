@@ -19,7 +19,10 @@ const manifestTransform = () => {
       if (amoId) {
         manifest.browser_specific_settings = {
           ...manifest.browser_specific_settings,
-          gecko: { id: amoId }
+          gecko: {
+            ...manifest.browser_specific_settings.gecko,
+            id: amoId
+          }
         };
       }
       
